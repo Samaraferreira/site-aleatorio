@@ -1,0 +1,176 @@
+:root {
+  --color-green: #1F8C6B;
+  --color-background: #16161B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}  
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: transparent;
+  padding: 24px 100px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 8px solid var(--color-green);
+} 
+
+header .btn button {
+  font-size: 16px;
+  width: 180px;
+  height: 56px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .btn .btn-login {
+  background: transparent;
+  color: #EA473B;
+  border: 1px solid #EA473B;
+  margin-right: 8px;
+}
+
+header .btn .btn-register {
+  background:  var(--color-green);
+  color: #fff;
+}
+
+header .btn .btn-register:hover {
+  opacity: 0.9;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+  padding: 32px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main img {
+  /* max-width: 800px; */
+  width: 100%;
+  flex: 1;
+}
+
+.title {
+  min-width: 400px;
+}
+
+.title h1 {
+  color: #FFF;
+  margin-bottom: 56px;
+  font-size: 54px;
+}
+
+.title h3 {
+  color: #9C9C9C;
+  font-weight: normal;
+  max-width: 400px;
+  margin-right: 40px;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 24px 50px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 32px 50px;
+  }
+
+  main img {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .title {
+    min-width: 400px;
+  }
+  
+  .title h1 {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
+  .title h3 {
+    color: #9C9C9C;
+    font-weight: normal;
+    max-width: 400px;
+  }  
+
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 510px) {
+  header {
+    padding: 24px 30px;
+    border-top-width: 4px;
+  } 
+
+  .btn {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 32px 30px;
+  }
+
+  .title {
+    min-width: auto;
+  }
+  
+  .title h1 {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
+  .title h3 {
+    color: #9C9C9C;
+    font-weight: normal;
+    /* max-width: 400px; */
+  }  
+
+  .menu {
+    display: block;
+  }
+}
