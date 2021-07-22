@@ -1,0 +1,172 @@
+main {
+  width: 100%;
+  flex: 1;
+  padding: 32px 100px;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-img {
+  /* max-width: 800px; */
+  width: 100%;
+  flex: 1;
+}
+
+.banner .title {
+  min-width: 424px;
+}
+
+.banner .title h1 {
+  color: #FFF;
+  margin-bottom: 46px;
+  font-size: 54px;
+}
+
+.banner .title h3 {
+  color: #9C9C9C;
+  font-weight: normal;
+  max-width: 400px;
+  /* margin-right: 40px; */
+}
+
+.arrow {
+  position: absolute;
+  bottom: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #36BC94;
+}
+
+.arrow img {
+  margin-top: 8px;
+  width: 24px;
+  opacity: 1;
+  animation: anima 1200ms ease infinite;
+}
+
+@keyframes anima {
+  to {
+    opacity: 0.3;
+    transform: scale(0.85) translateY(20px);
+  }
+}
+
+.content {
+  margin-top: 120px;
+}
+
+.content .events {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+}
+
+.events .event {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background-light);
+  padding: 20px 16px;
+  border-radius: 8px;
+}
+
+.event .event__title {
+  color: #FFF;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.event .event__description {
+  color: rgb(201, 214, 209)
+}
+
+.event .event__date {
+  color: #24B086;
+  margin: 16px 0;
+  text-align: right;
+}
+
+.event .event__link {
+  padding: 8px 16px;
+  background-color: var(--color-green);
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+  main {
+    padding: 32px 50px;
+  }
+
+  .banner .hero-img {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .banner .title {
+    min-width: 360px;
+  }
+  
+  .banner .title h1 {
+    margin-bottom: 20px;
+    font-size: 46px;
+  }
+
+  .banner .title h3 {
+    max-width: 400px;
+  }  
+
+  .content .events {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  main {
+    padding: 32px 30px;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .title {
+    min-width: auto;
+  }
+  
+  .banner .title h1 {
+    font-size: 34px;
+  }
+
+  .arrow {
+    bottom: -62px;
+  }
+
+  .content .events {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 414px) {
+  main .hero-img {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .banner .title {
+    margin-top: 15%;
+  }
+}

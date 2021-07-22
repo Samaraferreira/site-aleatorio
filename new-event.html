@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeEvent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/new-event.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/index.html">
+          <img class="logo" src="assets/logo.svg" alt="freeEvent" />
+        </a>
+        <div class="btn">
+          <button class="btn-register" onclick="alert('Evento publicado!')">Publicar evento</button>
+        </div>
+      </header>
+      <main>
+        <div id="form-box">
+          <div class="title">
+            <h1>Cadastre um evento</h1>
+            <h3>É rapidinho ;)</h3>
+          </div>
+          <form>
+            <div class="input-block">
+              <label for="title">Nome do evento</label>
+              <input type="text" name="title" placeholder="um bom nome diz muito sobre o evento :)" />
+            </div>
+
+            <div class="input-block">
+              <label for="description">Descrição</label>
+              <textarea type="text" name="description" placeholder="manda uma descrição para a galera se identificar"></textarea>
+            </div>
+            
+            <div class="input-block">
+              <label for="address">Endereço (link)</label>
+              <input type="text" name="address" placeholder="não vale colocar o local errado" />
+            </div>
+
+            <div class="input-block">
+              <label for="date">Data e horário</label>
+              <div class="group">
+                <input type="date" name="date" />
+                <input type="time" name="time" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 :root {
   --color-green: #1F8C6B;
   --color-background: #16161B;
+  --color-background-light: #1F1F26;
 }
 
 * {
@@ -15,7 +16,7 @@ body {
   background-color: var(--color-background);
 }
 
-body, input, button {
+body, input, button, textarea {
   font-family: 'Roboto', sans-serif;
 }  
 
@@ -36,6 +37,13 @@ header {
   justify-content: space-between;
   border-top: 8px solid var(--color-green);
 } 
+
+header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
 
 header .btn button {
   font-size: 16px;
@@ -63,68 +71,11 @@ header .btn .btn-register:hover {
   opacity: 0.9;
 }
 
-main {
-  width: 100%;
-  flex: 1;
-  padding: 32px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-main .hero-img {
-  /* max-width: 800px; */
-  width: 100%;
-  flex: 1;
-}
-
-.title {
-  min-width: 424px;
-}
-
-.title h1 {
-  color: #FFF;
-  margin-bottom: 46px;
-  font-size: 54px;
-}
-
-.title h3 {
-  color: #9C9C9C;
-  font-weight: normal;
-  max-width: 400px;
-  /* margin-right: 40px; */
-}
-
-.menu {
-  display: none;
-}
 
 @media (max-width: 880px) {
   header {
     padding: 24px 50px;
   }
-
-  main {
-    padding: 32px 50px;
-  }
-
-  main .hero-img {
-    margin-top: 60px;
-    width: 100%;
-  }
-
-  .title {
-    min-width: 360px;
-  }
-  
-  .title h1 {
-    margin-bottom: 20px;
-    font-size: 46px;
-  }
-
-  .title h3 {
-    max-width: 400px;
-  }  
 }
 
 @media (max-width: 510px) {
@@ -138,32 +89,10 @@ main .hero-img {
     height: 42px;
     font-size: 14px;
   }
-
-  main {
-    flex-direction: column;
-    padding: 32px 30px;
-  }
-
-  .title {
-    min-width: auto;
-  }
-  
-  .title h1 {
-    font-size: 34px;
-  }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 414px) {
   .logo {
     width: 90px;
-  }
-
-  main .hero-img {
-    margin-top: 30px;
-    width: 100%;
-  }
-
-  .title {
-    margin-top: 15%;
   }
 }

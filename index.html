@@ -5,27 +5,67 @@
     <meta charset="UTF-8">
     <title>FreeEvent</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <header>
-        <img class="logo" src="assets/logo.svg" alt="freeEvent" />
+        <a href="/index.html">
+          <img class="logo" src="assets/logo.svg" alt="freeEvent" />
+        </a>
         <div class="btn">
-          <!-- <button class="btn-login">Login</button> -->
-          <button class="btn-register">Cadastrar evento</button>
-        </div>
-        <div class="menu">
-          <img src="assets/menu.svg" />
+          <a href="/new-event.html">
+            <button class="btn-register">Publicar evento</button>
+          </a>
         </div>
       </header>
       <main>
-        <div class="title">
-          <h1>Encontre eventos gratuitos na sua região</h1>
-          <h3>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h3>
+        <div class="banner">
+          <div class="title">
+            <h1>Encontre eventos online e gratuitos</h1>
+            <h3>Lorem ipsum is placeholder text commonly used in the graphic, 
+              print, and publishing industries for previewing layouts and visual mockups.</h3>
+          </div>
+          <img class="hero-img" src="assets/hero.svg" alt="festa" />
+  
+          <div class="arrow">
+            <span>Eventos publicados</span>
+            <img src="assets/down-arrow.svg" alt="arrow">
+          </div>
         </div>
-        <img class="hero-img" src="assets/hero.svg" alt="festa" />
+        <div class="content">
+          <ul class="events">
+            <li class="event">
+              <h5 class="event__title">Workshop de Marketing</h5>
+              <p class="event__description">
+                Lorem ipsum is placeholder text commonly used in the graphic, 
+                print, and publishing industries for previewing layouts and visual mockups.
+              </p>
+              <span class="event__date">31 de Julho de 2021, 15:00h</span>
+              <a class="event__link" href="https://meet.google.com/btj-ddffhhf">Participar</a>
+            </li>
+            <li class="event">
+              <h5 class="event__title">Maratona Netflix</h5>
+              <p class="event__description">
+                Lorem ipsum is placeholder text commonly used in the graphic, 
+                print, and publishing industries for previewing layouts and visual mockups.
+              </p>
+              <span class="event__date">28 de Julho de 2021, 12:30h</span>
+              <a class="event__link" href="https://meet.google.com/btj-ddffhhf">Participar</a>
+            </li>
+            <li class="event">
+              <h5 class="event__title">Monitoria de programação web</h5>
+              <p class="event__description">
+                Lorem ipsum is placeholder text commonly used in the graphic, 
+                print, and publishing industries for previewing layouts and visual mockups.
+              </p>
+              <span class="event__date">24 de Julho de 2021, 18:30h</span>
+              <a class="event__link" href="https://meet.google.com/btj-ddffhhf">Participar</a>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
   </body>
