@@ -47,12 +47,12 @@ header .btn button {
   cursor: pointer;
 }
 
-header .btn .btn-login {
+/* header .btn .btn-login {
   background: transparent;
   color: #EA473B;
   border: 1px solid #EA473B;
   margin-right: 8px;
-}
+} */
 
 header .btn .btn-register {
   background:  var(--color-green);
@@ -72,19 +72,19 @@ main {
   justify-content: space-between;
 }
 
-main img {
+main .hero-img {
   /* max-width: 800px; */
   width: 100%;
   flex: 1;
 }
 
 .title {
-  min-width: 400px;
+  min-width: 424px;
 }
 
 .title h1 {
   color: #FFF;
-  margin-bottom: 56px;
+  margin-bottom: 46px;
   font-size: 54px;
 }
 
@@ -92,51 +92,39 @@ main img {
   color: #9C9C9C;
   font-weight: normal;
   max-width: 400px;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .menu {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   header {
     padding: 24px 50px;
   }
 
-  .btn {
-    display: none;
-  }
-
   main {
-    flex-direction: column;
     padding: 32px 50px;
   }
 
-  main img {
+  main .hero-img {
     margin-top: 60px;
     width: 100%;
   }
 
   .title {
-    min-width: 400px;
+    min-width: 360px;
   }
   
   .title h1 {
-    color: #FFF;
     margin-bottom: 20px;
-    font-size: 34px;
+    font-size: 46px;
   }
 
   .title h3 {
-    color: #9C9C9C;
-    font-weight: normal;
     max-width: 400px;
   }  
-
-  .menu {
-    display: block;
-  }
 }
 
 @media (max-width: 510px) {
@@ -145,8 +133,10 @@ main img {
     border-top-width: 4px;
   } 
 
-  .btn {
-    display: none;
+  header .btn button {
+    width: 140px;
+    height: 42px;
+    font-size: 14px;
   }
 
   main {
@@ -159,18 +149,21 @@ main img {
   }
   
   .title h1 {
-    color: #FFF;
-    margin-bottom: 20px;
     font-size: 34px;
   }
+}
 
-  .title h3 {
-    color: #9C9C9C;
-    font-weight: normal;
-    /* max-width: 400px; */
-  }  
+@media (max-width: 412px) {
+  .logo {
+    width: 90px;
+  }
 
-  .menu {
-    display: block;
+  main .hero-img {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .title {
+    margin-top: 15%;
   }
 }
