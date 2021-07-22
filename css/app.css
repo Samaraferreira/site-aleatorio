@@ -55,13 +55,6 @@ header .btn button {
   cursor: pointer;
 }
 
-/* header .btn .btn-login {
-  background: transparent;
-  color: #EA473B;
-  border: 1px solid #EA473B;
-  margin-right: 8px;
-} */
-
 header .btn .btn-register {
   background:  var(--color-green);
   color: #fff;
@@ -70,7 +63,6 @@ header .btn .btn-register {
 header .btn .btn-register:hover {
   opacity: 0.9;
 }
-
 
 @media (max-width: 880px) {
   header {
