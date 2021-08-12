@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeEvent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../css/app.css" rel="stylesheet">
+    <link href="../../css/functions.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <form id="maior-menor">
+          <h1>Maior e menor número</h1>
+          <input type="number" name="number">
+          <input type="number" name="number">
+          <input type="number" name="number">
+          <input type="number" name="number">
+          <input type="number" name="number">
+          <input type="submit" value="Enviar">
+        </form>
+
+        <form id="vogal">
+          <h1>É vogal?</h1>
+          <input type="text" id="caracter">
+          <input type="submit" value="Enviar">
+        </form>
+
+        <form id="limites">
+          <h1>Limites</h1>
+          <input type="number" id="inferior">
+          <input type="number" id="superior">
+          <input type="submit" value="Enviar">
+        </form>
+
+        <form id="ordem">
+          <h1>Ordem</h1>
+          <input type="number" name="valor">
+          <input type="number" name="valor">
+          <input type="number" name="valor">
+          <input type="submit" value="Enviar">
+        </form>
+
+        <form id="positivo-negativo">
+          <h1>Valor positivo ou negativo?</h1>
+          <input type="number" id="valor">
+          <input type="submit" value="Enviar">
+        </form>
+
+        <form id="par-impar">
+          <h1>É par ou ímpar?</h1>
+          <input type="number" id="valor-form6">
+          <input type="submit" value="Enviar">
+        </form>
+      </main>
+    </div>
+  </body>
+  <script>
+    // MAIOR MENOR
+    const form1 = document.getElementById('maior-menor');
+    form1.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      let numbers = [];
+      form1.querySelectorAll('[name]').forEach((elem) => {
+        if (elem.value)
+          numbers.push(parseInt(elem.value));
+      });
+
+      MAIOR_MENOR(numbers[0], numbers[1], numbers[2], numbers[3], numbers[4])
+
+      function MAIOR_MENOR(a, b, c, d, e) {
+        let maior = Math.max(a, b, c, d, e)
+        let menor = Math.min(a, b, c, d, e)
+
+        alert("Menor valor: "+menor+ "\nMaior valor: "+maior)
+      }
+    });
+
+
+    // VOGAL
+    const form2 = document.getElementById('vogal');
+    form2.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      VOGAL(document.getElementById("caracter").value)
+
+      function VOGAL(c) {
+        const vogais = ["a", "e", "i", "o", "u"]
+        alert(vogais.includes(c) ? 1 : 0)
+      }
+    });
+
+    
+    // LIMITES
+    const form3 = document.getElementById('limites');
+    form3.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      const inferior = document.getElementById("inferior").value
+      const superior = document.getElementById("superior").value
+
+      LIMITES(parseInt(inferior), parseInt(superior))
+
+      function LIMITES(li, ls) {
+        let pares = []
+        let soma = 0
+
+        // intervalo aberto não inclui as extremidades
+        for (let i = li+1; i < ls; i++) {
+          if (i%2==0) {
+            pares.push(i)
+            soma += i; // entendi que é a soma dos pares
+          }
+        }
+
+        alert("Números pares: "+pares.join(" - ")
+        +"\nSomatória: "+soma)
+      }
+    });
+    
+
+    // ORDEM
+    const form4 = document.getElementById('ordem');
+    form4.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      let numbers = [];
+      form4.querySelectorAll('[name]').forEach((elem) => {
+        if (elem.value)
+          numbers.push(parseInt(elem.value));
+      });
+
+      ORDEM(numbers[0], numbers[1], numbers[2])
+
+      function ORDEM(a, b, c) {
+        
+        const ordenados = [a, b, c].sort(function(a, b) {
+                          return a - b;
+                        })
+        alert("Ordenados: "+ordenados.join(" - "))
+      }
+    });
+
+
+    const form5 = document.getElementById('positivo-negativo');
+    form5.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      const result = POSITIVO_NEGATIVO(document.getElementById("valor").value)
+      alert(result ? "Valor positivo" : "Valor negativo")
+
+      function POSITIVO_NEGATIVO(x) {
+        return x >= 0 ? true : false
+      }
+    });
+  
+  
+    // Par-ímpar
+    const form6 = document.getElementById('par-impar');
+    form6.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form submission
+
+      const result = PAR_IMPAR(document.getElementById("valor-form6").value)
+      alert(result ? "Valor é par" : "Valor é impar")
+
+      function PAR_IMPAR(x) {
+        return x%2 == 0 ? true : false
+      }
+    });
+  </script>
+</html>
