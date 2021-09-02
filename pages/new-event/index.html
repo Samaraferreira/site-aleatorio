@@ -7,6 +7,7 @@
     <link href="../../css/app.css" rel="stylesheet">
     <link href="../../css/new-event.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -15,7 +16,7 @@
           <img class="logo" src="../../assets/logo.svg" alt="freeEvent" />
         </a>
         <div class="btn">
-          <button class="btn-register" onclick="alert('Evento publicado!')">Publicar evento</button>
+          <button class="btn-register" onclick="handleSubmit()">Publicar evento</button>
         </div>
       </header>
       <main>
@@ -24,7 +25,7 @@
             <h1>Cadastre um evento</h1>
             <h3>É rapidinho ;)</h3>
           </div>
-          <form>
+          <form id="form">
             <div class="input-block">
               <label for="title">Nome do evento</label>
               <input type="text" name="title" id="title" placeholder="um bom nome diz muito sobre o evento :)" />
@@ -44,7 +45,7 @@
               <label for="date">Data e horário</label>
               <div class="group">
                 <input type="date" name="date" id="date" />
-                <input type="time" name="time" />
+                <input type="time" name="time" id="time" />
               </div>
             </div>
           </form>
